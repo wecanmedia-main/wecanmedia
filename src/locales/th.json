@@ -232,5 +232,8 @@
   "Scale efficiency applies automatically at higher volumes. Management fee (10%) and VAT not included.": "ประสิทธิภาพการปรับขนาดจะถูกนำมาใช้โดยอัตโนมัติเมื่อมีปริมาณงานที่สูงขึ้น ไม่รวมค่าธรรมเนียมการจัดการ (10%) และภาษีมูลค่าเพิ่ม",
   "Note: Management fee (10%) is not included in any prices above. All prices exclude VAT. Final invoice will include applicable taxes, fees, and management charges.": "หมายเหตุ: ค่าธรรมเนียมการจัดการ (10%) ไม่รวมอยู่ในราคาข้างต้น ราคาทั้งหมดไม่รวมภาษีมูลค่าเพิ่ม ใบแจ้งหนี้ฉบับสุดท้ายจะรวมภาษี ค่าธรรมเนียม และค่าใช้จ่ายในการจัดการที่เกี่ยวข้อง",
   "All packages exclude management fee (10%) and VAT.": "ทุกแพ็กเกจไม่รวมค่าธรรมเนียมการจัดการ (10%) และภาษีมูลค่าเพิ่ม",
-  "Turnaround ranges 3–14 days depending on volume. All prices exclude management fee (10%) and VAT.": "ระยะเวลาดำเนินการ 3–14 วัน ขึ้นอยู่กับปริมาณงาน ราคาทั้งหมดไม่รวมค่าธรรมเนียมการจัดการ (10%) และภาษีมูลค่าเพิ่ม"
+  "Turnaround ranges 3–14 days depending on volume. All prices exclude management fee (10%) and VAT.": "ระยะเวลาดำเนินการ 3–14 วัน ขึ้นอยู่กับปริมาณงาน ราคาทั้งหมดไม่รวมค่าธรรมเนียมการจัดการ (10%) และภาษีมูลค่าเพิ่ม",
+  "Photo Seeding Post (100 KOLs)": "โพสต์รูปภาพสร้างกระแส (100 KOLs)",
+  "Photo Seeding Post (300 KOLs)": "โพสต์รูปภาพสร้างกระแส (300 KOLs)",
+  "Photo Seeding Post (1,500+ KOLs)": "โพสต์รูปภาพสร้างกระแส (1,500+ KOLs)"
 }

@@ -39,9 +39,9 @@ const PILLARS = [
 ]
 
 const SEEDING_ROWS = [
-  { label: "Photo Seeding Post (100 KOCs)", platform: "Facebook Groups", turnaround: "5–7 days", price: "฿1,700.00" },
-  { label: "Photo Seeding Post (300 KOCs)", platform: "Facebook Groups", turnaround: "7–10 days", price: "฿1,450.00" },
-  { label: "Photo Seeding Post (1,500+ KOCs)", platform: "Facebook Groups", turnaround: "10–14 days", price: "฿1,200.00" },
+  { label: "Photo Seeding Post (100 KOLs)", platform: "Facebook Groups", turnaround: "5–7 days", price: "฿1,700.00" },
+  { label: "Photo Seeding Post (300 KOLs)", platform: "Facebook Groups", turnaround: "7–10 days", price: "฿1,450.00" },
+  { label: "Photo Seeding Post (1,500+ KOLs)", platform: "Facebook Groups", turnaround: "10–14 days", price: "฿1,200.00" },
   { label: "Comment Seeding (360 comments)", platform: "Facebook Groups & Posts", turnaround: "3–5 days", price: "฿300.00" },
   { label: "Comment Seeding (1,500+ comments)", platform: "Facebook Groups & Posts", turnaround: "5–9 days", price: "฿200.00" },
 ]
