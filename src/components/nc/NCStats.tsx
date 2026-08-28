@@ -19,8 +19,8 @@ export function NCStats() {
 
             <div className="bg-white rounded-2xl overflow-hidden flex flex-col">
               <div className="p-4 sm:p-6 pb-2">
-                <div className="text-3xl md:text-4xl font-bold text-foreground">{t("120K+")}</div>
-                <div className="mt-2 text-xs md:text-sm text-muted-foreground">{t("UGC Collected")}</div>
+                <div className="text-3xl md:text-4xl font-bold text-foreground">{t("10K+")}</div>
+                <div className="mt-2 text-xs md:text-sm text-muted-foreground">{t("Content Pieces Managed")}</div>
               </div>
               <img
                 src="/assets/nc-stats-phone.webp"
@@ -32,9 +32,9 @@ export function NCStats() {
             <div className="rounded-2xl overflow-hidden flex flex-col">
               <div className="h-32 md:h-36 bg-cover bg-center" style={{ backgroundImage: "url('/assets/nc-hero-photo.webp')" }} />
               <div className="bg-white p-4 sm:p-6 flex-1">
-                <div className="text-3xl md:text-4xl font-bold text-foreground">{t("50K+")}</div>
+                <div className="text-3xl md:text-4xl font-bold text-foreground">{t("5K+")}</div>
                 <div className="mt-2 text-xs md:text-sm text-muted-foreground flex items-center justify-between gap-2">
-                  <span>{t("Influencer Partnerships")}</span>
+                  <span>{t("Creators Worked With")}</span>
                   <span className="flex -space-x-1 shrink-0">
                     <span className="w-5 h-5 rounded-full bg-black text-white flex items-center justify-center text-[9px] font-bold ring-2 ring-white">N</span>
                     <span className="w-5 h-5 rounded-full bg-red-700 flex items-center justify-center ring-2 ring-white">
@@ -55,7 +55,7 @@ export function NCStats() {
               {t("Elevate Your Brand with Influencer Marketing*")}
             </h2>
             <p className="mt-4 text-white/70 leading-relaxed">
-              {t("With over 50K influencer partnerships and 120K+ high-quality UGC created in 8 years, we're the perfect partner to help you succeed with Influencer Marketing!")}
+              {t("With over 5,000 creators worked with and 10,000+ content pieces managed across 6+ years in business, we're the perfect partner to help you scale with authentic influencer marketing!")}
             </p>
             <p className="mt-6 text-xs uppercase tracking-wide text-white/50">{t("Turn Influence Into Growth")}</p>
             <div className="mt-3 flex flex-wrap gap-3">
