@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 const SEEDING_ROWS = [
   { label: "Photo Seeding Post (100 KOLs)", standard: "฿1,700.00", bulk: "฿1,700.00" },
   { label: "Photo Seeding Post (300 KOLs)", standard: "฿1,450.00", bulk: "฿1,450.00" },
-  { label: "Photo Seeding Post (1,500+ KOLs)", standard: "฿1,200.00", bulk: "฿1,200.00" },
+  { label: "Photo Seeding Post (1,500+ KOLs)", standard: "฿1,300.00", bulk: "฿1,300.00" },
   { label: "Comment Seeding (360 comments)", standard: "฿300.00", bulk: "฿300.00" },
   { label: "Comment Seeding (1,500+ comments)", standard: "฿200.00", bulk: "฿200.00" },
 ]
