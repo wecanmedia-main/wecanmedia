@@ -1,0 +1,273 @@
+/* PLATFORM DESIGN DNA (server-assigned identity): palette "Emerald & Brass" · fonts Fraunces / Manrope. These :root token values ARE this build's identity — keep them when restyling (only an explicit user color request may change them). */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────────────────────────────────────────────────────────────────────
+   CHANTAN PREMIUM DESIGN FOUNDATION (2026-06-07)
+   Every Smart Agent app inherits this. Token NAMES match shadcn/ui (so all
+   shadcn components keep working) — the VALUES are upgraded to a refined,
+   premium default (warm-neutral light + deep dark, indigo accent, soft depth,
+   rounder radii). The agent may re-skin these variables per project to apply a
+   chosen "design direction" — keep the names, change the values.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+@layer base {
+  :root {
+    /* Surfaces — warm, slightly-off-white paper (not flat #fff) */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+
+    /* NC Media brand teal */
+    --primary: 167 40% 58%;
+    --primary-foreground: 0 0% 24%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 13%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 36%;
+
+    --accent: 47 100% 96%;
+    --accent-foreground: 0 0% 20%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 56% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 167 40% 58%;
+
+    --brand-dark: 196 100% 6%;
+
+    /* Rounded per brand */
+    --radius: 9px;
+
+    /* Premium soft, layered elevation (used via tailwind boxShadow tokens) */
+    --shadow-sm: 0 1px 2px 0 hsl(240 30% 12% / 0.04), 0 1px 3px 0 hsl(240 30% 12% / 0.06);
+    --shadow-md: 0 2px 4px -1px hsl(240 30% 12% / 0.06), 0 8px 16px -4px hsl(240 30% 12% / 0.08);
+    --shadow-lg: 0 4px 8px -2px hsl(240 30% 12% / 0.07), 0 20px 40px -8px hsl(240 30% 12% / 0.12);
+    --shadow-xl: 0 8px 16px -4px hsl(240 30% 12% / 0.08), 0 32px 64px -12px hsl(240 30% 12% / 0.16);
+    --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.10), 0 8px 32px -8px hsl(var(--primary) / 0.35);
+
+    /* Typography — durable premium floor. First builds/redesigns may replace
+       these with a project-specific font system chosen from the prompt, but
+       Arabic/RTL and Latin text never fall to plain browser defaults. */
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-display: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+    --sidebar-background: 40 30% 98%;
+    --sidebar-foreground: 240 10% 26%;
+    --sidebar-primary: 243 68% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 14% 95%;
+    --sidebar-accent-foreground: 240 18% 14%;
+    --sidebar-border: 240 16% 90%;
+    --sidebar-ring: 243 68% 56%;
+  }
+
+  .dark {
+    /* Deep, slightly-blue ink (not pure black) — premium dark */
+    --background: 240 16% 6%;
+    --foreground: 240 12% 96%;
+
+    --card: 240 15% 9%;
+    --card-foreground: 240 12% 96%;
+
+    --popover: 240 16% 8%;
+    --popover-foreground: 240 12% 96%;
+
+    --primary: 243 75% 68%;
+    --primary-foreground: 240 30% 8%;
+
+    --secondary: 240 10% 15%;
+    --secondary-foreground: 240 12% 96%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 8% 62%;
+
+    --accent: 243 40% 18%;
+    --accent-foreground: 243 80% 84%;
+
+    --destructive: 0 62% 46%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 50% 46%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 240 10% 17%;
+    --input: 240 10% 17%;
+    --ring: 243 75% 68%;
+
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.30), 0 1px 3px 0 hsl(0 0% 0% / 0.40);
+    --shadow-md: 0 2px 4px -1px hsl(0 0% 0% / 0.35), 0 8px 16px -4px hsl(0 0% 0% / 0.45);
+    --shadow-lg: 0 4px 8px -2px hsl(0 0% 0% / 0.40), 0 20px 40px -8px hsl(0 0% 0% / 0.55);
+    --shadow-xl: 0 8px 16px -4px hsl(0 0% 0% / 0.45), 0 32px 64px -12px hsl(0 0% 0% / 0.65);
+    --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.20), 0 8px 40px -8px hsl(var(--primary) / 0.45);
+
+    --sidebar-background: 240 16% 8%;
+    --sidebar-foreground: 240 10% 90%;
+    --sidebar-primary: 243 75% 68%;
+    --sidebar-primary-foreground: 240 30% 8%;
+    --sidebar-accent: 240 10% 15%;
+    --sidebar-accent-foreground: 240 12% 96%;
+    --sidebar-border: 240 10% 17%;
+    --sidebar-ring: 243 75% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Lenis-required override (its own recommended CSS): while Lenis drives the
+     scroll (it adds .lenis to <html>), CSS smooth scrolling must be OFF — the
+     two animate against each other (rubbery/stuck scroll). No effect on sites
+     that never mount <SmoothScroll>. */
+  html.lenis,
+  html.lenis body {
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'cv11', 'ss01';
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Premium headings — display font, tight tracking, balanced wrapping */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+  }
+
+  h1 { letter-spacing: -0.032em; line-height: 1.0; }
+  h2 { letter-spacing: -0.026em; line-height: 1.05; }
+
+  p { text-wrap: pretty; }
+
+  ::selection {
+    background-color: hsl(var(--primary) / 0.18);
+    color: hsl(var(--foreground));
+  }
+
+  /* Refined scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.30);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground) / 0.50); background-clip: padding-box; }
+}
+
+/* LINE Seed Sans TH — Thai UI font, applied only while the site is in Thai */
+@font-face {
+  font-family: 'LINE Seed Sans TH';
+  src: url('https://cdn.jsdelivr.net/npm/@fontpkg/line-seed-sans-th@1.0.1/LINESeedSansTH_Rg.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LINE Seed Sans TH';
+  src: url('https://cdn.jsdelivr.net/npm/@fontpkg/line-seed-sans-th@1.0.1/LINESeedSansTH_Bd.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+html[lang="th"] body {
+  font-family: 'LINE Seed Sans TH', var(--font-sans);
+}
+html[lang="th"] h1,
+html[lang="th"] h2,
+html[lang="th"] h3,
+html[lang="th"] h4,
+html[lang="th"] h5,
+html[lang="th"] h6 {
+  font-family: 'LINE Seed Sans TH', var(--font-display);
+}
+/* Thai script stacks tone marks & vowels above/below the base letter — a tight
+   Latin-tuned line-height/letter-spacing clips or overlaps them between lines.
+   Loosen both for every heading (and any custom leading-[…] utility) while
+   the site is in Thai. !important is required to beat the per-component
+   Tailwind leading-[1.05] utilities used on hero headlines. */
+html[lang="th"] h1,
+html[lang="th"] h2,
+html[lang="th"] h3,
+html[lang="th"] h4,
+html[lang="th"] h5,
+html[lang="th"] h6,
+html[lang="th"] p,
+html[lang="th"] span,
+html[lang="th"] div {
+  letter-spacing: normal !important;
+}
+html[lang="th"] h1 { line-height: 1.25 !important; }
+html[lang="th"] h2 { line-height: 1.3 !important; }
+html[lang="th"] h3,
+html[lang="th"] h4 { line-height: 1.35 !important; }
+
+/* Language switcher sits on the dark header — force a visible pill regardless
+   of the default light-theme toggle styling. */
+button[aria-label^="Switch to"] {
+  background-color: hsl(0 0% 100% / 0.12) !important;
+  border-color: hsl(0 0% 100% / 0.3) !important;
+  color: #fff !important;
+}
+button[aria-label^="Switch to"]:hover {
+  background-color: hsl(0 0% 100% / 0.22) !important;
+}
+
+/* ── Premium utility layer — composable helpers the agent can use freely ── */
+@layer components {
+  /* Glassy surface (nav bars, floating cards) */
+  .glass {
+    background-color: hsl(var(--background) / 0.65);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+  }
+
+  /* Subtle premium gradient text for hero headlines */
+  .text-gradient {
+    background-image: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--primary)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Hover-lift interaction for cards/buttons */
+  .hover-lift {
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .hover-lift:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+  /* Scroll-reveal — FAIL-SAFE by design.
+     .reveal is VISIBLE by default. It is only hidden once the boot script in
+     index.html confirms JS is alive and will reveal it (adds html.reveal-js).
+     So if JS errors, is disabled, or prefers-reduced-motion → content always
+     shows. The boot script observes current AND future .reveal nodes (a
+     MutationObserver), so async/DB-rendered content can never get stuck hidden. */
+  .reveal { opacity: 1; }
+  .reveal-js .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+  .reveal-js .reveal.is-visible { opacity: 1; transform: none; }
+}
