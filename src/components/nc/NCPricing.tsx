@@ -5,8 +5,8 @@ const SEEDING_ROWS = [
   { label: "Photo Seeding Post (100 KOCs)", standard: "฿1,700.00", bulk: "฿1,700.00" },
   { label: "Photo Seeding Post (300 KOCs)", standard: "฿1,450.00", bulk: "฿1,450.00" },
   { label: "Photo Seeding Post (1,500+ KOCs)", standard: "฿1,200.00", bulk: "฿1,200.00" },
-  { label: "Comment Seeding (360 comments)", standard: "฿355.00", bulk: "฿355.00" },
-  { label: "Comment Seeding (1,500+ comments)", standard: "฿281.00", bulk: "฿281.00" },
+  { label: "Comment Seeding (360 comments)", standard: "฿300.00", bulk: "฿300.00" },
+  { label: "Comment Seeding (1,500+ comments)", standard: "฿200.00", bulk: "฿200.00" },
 ]
 
 const REVIEW_TIERS = [

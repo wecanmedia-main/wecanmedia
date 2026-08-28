@@ -6,7 +6,7 @@ Built with **[Chantan](https://chantanxbeta.click)** — describe what you want,
 
 - **Edit this project:** [open it in Chantan](https://chantanstudio.pages.dev/dashboard/project/739b8766-7c55-4583-a020-69c7b6b034ef)
 - **Live site:** [wecanmedia.co.th](https://wecanmedia.co.th)
-- **Repository:** `wecanmedia-main/wecanmedia` (private)
+- **Repository:** `wecanmedia-main/website-scraper-bot` (private)
 
 ## How do I change this app?
 
@@ -22,10 +22,10 @@ You need [Node.js](https://nodejs.org) installed. Then:
 
 ```bash
 # 1. Clone this repository
-git clone https://github.com/wecanmedia-main/wecanmedia.git
+git clone https://github.com/wecanmedia-main/website-scraper-bot.git
 
 # 2. Go into the folder
-cd wecanmedia
+cd website-scraper-bot
 
 # 3. Install the dependencies
 npm install

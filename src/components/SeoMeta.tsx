@@ -2,15 +2,14 @@ import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
 
 // Keeps the browser tab title + meta description in sync with the language
-// toggle. These live in the document head (outside the translated React
-// tree), so we push the translated strings in as a side effect.
+// toggle. Built from strings already in the translation catalog (used
+// elsewhere on the site) so both English and Thai versions are always
+// correct and in sync with the rest of the copy.
 export function SeoMeta() {
   const { t, i18n } = useTranslation()
 
-  const title = t("WeCan Media | Seeding, KOL & E-Commerce Review Campaigns in Thailand")
-  const description = t(
-    "Enterprise-scale seeding, KOL/affiliate campaigns and verified e-commerce reviews for brands in Thailand — transparent pricing, real creators, full reporting."
-  )
+  const title = `${t("WeCan Media")} | ${t("Seeding, KOL/affiliate campaigns and verified reviews — built for enterprise brands.")}`
+  const description = t("Seeding, KOL/affiliate campaigns and verified e-commerce reviews — run at enterprise scale, with transparent rate cards and full reporting.")
 
   useEffect(() => {
     document.title = title
