@@ -4,7 +4,7 @@ Built with **[Chantan](https://chantanxbeta.click)** — describe what you want,
 
 ## Project info
 
-- **Edit this project:** [open it in Chantan](https://chantanstudio.pages.dev/dashboard/project/739b8766-7c55-4583-a020-69c7b6b034ef)
+- **Edit this project:** [open it in Chantan](https://chantanxbeta.click/dashboard/project/739b8766-7c55-4583-a020-69c7b6b034ef)
 - **Live site:** [wecanmedia.co.th](https://wecanmedia.co.th)
 - **Repository:** `wecanmedia-main/website-scraper-bot` (private)
 
@@ -12,7 +12,7 @@ Built with **[Chantan](https://chantanxbeta.click)** — describe what you want,
 
 ### Use Chantan (recommended — no coding)
 
-Open [your project in Chantan](https://chantanstudio.pages.dev/dashboard/project/739b8766-7c55-4583-a020-69c7b6b034ef) and just describe the change in chat.
+Open [your project in Chantan](https://chantanxbeta.click/dashboard/project/739b8766-7c55-4583-a020-69c7b6b034ef) and just describe the change in chat.
 You can edit text, colours and photos directly on the preview too.
 When you are happy, press **Publish** — your live site updates.
 
