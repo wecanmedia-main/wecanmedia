@@ -44,6 +44,9 @@ const SEEDING_ROWS = [
   { label: "Photo Seeding Post (1,500+ KOLs)", platform: "Facebook Groups", turnaround: "10–14 days", price: "฿1,300.00" },
   { label: "Comment Seeding (360 comments)", platform: "Facebook Groups & Posts", turnaround: "3–5 days", price: "฿300.00" },
   { label: "Comment Seeding (1,500+ comments)", platform: "Facebook Groups & Posts", turnaround: "5–9 days", price: "฿200.00" },
+  { label: "KOL Group Seeding (100 groups)", platform: "Facebook Groups", turnaround: "5–7 days", price: "฿1,200.00" },
+  { label: "KOL Group Seeding (300 groups)", platform: "Facebook Groups", turnaround: "7–10 days", price: "฿1,000.00" },
+  { label: "KOL Group Seeding (500+ groups)", platform: "Facebook Groups", turnaround: "10–14 days", price: "฿850.00" },
 ]
 
 const KOL_TIERS = [

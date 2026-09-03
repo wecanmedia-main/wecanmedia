@@ -7,6 +7,9 @@ const SEEDING_ROWS = [
   { label: "Photo Seeding Post (1,500+ KOLs)", standard: "฿1,300.00", bulk: "฿1,300.00" },
   { label: "Comment Seeding (360 comments)", standard: "฿300.00", bulk: "฿300.00" },
   { label: "Comment Seeding (1,500+ comments)", standard: "฿200.00", bulk: "฿200.00" },
+  { label: "KOL Group Seeding (100 groups)", standard: "฿1,200.00", bulk: "฿1,200.00" },
+  { label: "KOL Group Seeding (300 groups)", standard: "฿1,000.00", bulk: "฿1,000.00" },
+  { label: "KOL Group Seeding (500+ groups)", standard: "฿850.00", bulk: "฿850.00" },
 ]
 
 const REVIEW_TIERS = [
