@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Linkedin } from "lucide-react"
+import { Linkedin, MessageCircle } from "lucide-react"
 import { useTranslation } from 'react-i18next'
 
 export function NCFooter() {
@@ -22,6 +22,15 @@ export function NCFooter() {
             </p>
             <p className="mt-5 text-xs text-white/50">{t("Follow us on:")}</p>
             <div className="mt-3 flex gap-3">
+              <a
+                href="https://lin.ee/67M9LzF"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={t("LINE")}
+                className="text-white/60 hover:text-primary transition-colors"
+              >
+                <img src="/assets/line-sticky-icon.webp" alt="LINE" className="w-4 h-4" />
+              </a>
               <a
                 href="https://th.linkedin.com/company/wecan-media-thailand?"
                 target="_blank"
