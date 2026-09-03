@@ -22,12 +22,6 @@ export function NCPricing() {
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <div className="max-w-xl mb-12 reveal">
           <p className="text-sm font-medium text-primary/90">{t("Rate Card")}</p>
-          <h2 className="mt-3 text-3xl md:text-[42px] font-bold text-foreground">
-            {t("The Rates, On One Slide")}
-          </h2>
-          <p className="mt-3 text-muted-foreground">
-            {t("All rates below. THB per unit — includes closed Facebook groups and open communities.")}
-          </p>
         </div>
 
         {/* Community Seeding */}
