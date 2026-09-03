@@ -47,6 +47,10 @@ const SEEDING_ROWS = [
   { label: "KOL Group Seeding (100 groups)", platform: "Facebook Groups", turnaround: "5–7 days", price: "฿1,200.00" },
   { label: "KOL Group Seeding (300 groups)", platform: "Facebook Groups", turnaround: "7–10 days", price: "฿1,000.00" },
   { label: "KOL Group Seeding (500+ groups)", platform: "Facebook Groups", turnaround: "10–14 days", price: "฿850.00" },
+  { label: "Community Seeding (300x)", platform: "Facebook Groups", turnaround: "5–7 days", price: "฿1,000.00" },
+  { label: "Community Seeding (500x)", platform: "Facebook Groups", turnaround: "7–10 days", price: "฿900.00" },
+  { label: "Community Seeding (1,000x)", platform: "Facebook Groups", turnaround: "10–14 days", price: "฿850.00" },
+  { label: "Community Seeding (2,000x)", platform: "Facebook Groups", turnaround: "14–21 days", price: "฿800.00" },
 ]
 
 const KOL_TIERS = [

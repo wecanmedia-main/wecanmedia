@@ -29,7 +29,7 @@ export function NCHeader() {
         target="_blank"
         rel="noreferrer"
         aria-label={t("LINE")}
-        className="fixed right-6 bottom-24 z-40 w-20 h-20 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300"
+        className="fixed right-6 bottom-24 z-40 w-20 h-20 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300"
       >
         <img src="/assets/line-sticky-icon.webp" alt={t("LINE")} className="w-12 h-12" />
       </a>
