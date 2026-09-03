@@ -29,7 +29,7 @@ export function NCFooter() {
                 aria-label={t("LINE")}
                 className="text-white/60 hover:text-primary transition-colors"
               >
-                <img src="/assets/line-sticky-icon.webp" alt="LINE" className="w-4 h-4" />
+                <img src="/assets/line-sticky-icon.webp" alt={t("LINE")} className="w-4 h-4" />
               </a>
               <a
                 href="https://th.linkedin.com/company/wecan-media-thailand?"

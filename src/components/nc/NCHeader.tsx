@@ -29,9 +29,9 @@ export function NCHeader() {
         target="_blank"
         rel="noreferrer"
         aria-label={t("LINE")}
-        className="fixed right-6 bottom-6 z-40 w-14 h-14 rounded-full bg-primary text-[#3d3d3d] flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300"
+        className="fixed right-6 bottom-6 z-40 w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300"
       >
-        <img src="/assets/line-sticky-icon.webp" alt="LINE" className="w-6 h-6" />
+        <img src="/assets/line-sticky-icon.webp" alt={t("LINE")} className="w-6 h-6" />
       </a>
 
       <header

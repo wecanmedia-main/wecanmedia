@@ -16,7 +16,7 @@ export function NCFloatingCTA() {
   if (dismissed || !visible) return null
 
   return (
-    <div className="fixed bottom-5 right-5 z-40 max-w-[280px] bg-white rounded-2xl shadow-xl border border-border p-4 hidden sm:block">
+    <div className="fixed bottom-20 right-6 z-40 max-w-[280px] bg-white rounded-2xl shadow-xl border border-border p-4 hidden sm:block">
       <button
         onClick={() => setDismissed(true)}
         aria-label={t("Dismiss")}
@@ -24,12 +24,12 @@ export function NCFloatingCTA() {
       >
         <X className="w-3.5 h-3.5" />
       </button>
-      <p className="text-sm font-medium text-foreground pr-4">{t("Scale your brand with top creators")}</p>
+      <p className="text-sm font-medium text-foreground pr-4">{t("ขยายแบรนด์ของคุณด้วยสุดยอดครีเอเตอร์")}</p>
       <a
         href="/contact"
         className="mt-2 inline-block text-sm text-primary underline underline-offset-2"
       >
-        {t("Book a call")}
+        {t("นัดหมายการโทร")}
       </a>
     </div>
   )
