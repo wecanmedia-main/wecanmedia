@@ -38,19 +38,19 @@ const PILLARS = [
   },
 ]
 
+const SEEDING_COLUMNS = ["Under 500", "500 – 999", "1,000 – 1,499", "1,500 – 2,999", "3,000+"]
+
 const SEEDING_ROWS = [
-  { label: "Photo Seeding Post (100 KOLs)", platform: "Facebook Groups", turnaround: "5–7 days", price: "฿1,700.00" },
-  { label: "Photo Seeding Post (300 KOLs)", platform: "Facebook Groups", turnaround: "7–10 days", price: "฿1,450.00" },
-  { label: "Photo Seeding Post (1,500+ KOLs)", platform: "Facebook Groups", turnaround: "10–14 days", price: "฿1,300.00" },
-  { label: "Comment Seeding (360 comments)", platform: "Facebook Groups & Posts", turnaround: "3–5 days", price: "฿300.00" },
-  { label: "Comment Seeding (1,500+ comments)", platform: "Facebook Groups & Posts", turnaround: "5–9 days", price: "฿200.00" },
-  { label: "KOL Group Seeding (100 groups)", platform: "Facebook Groups", turnaround: "5–7 days", price: "฿1,200.00" },
-  { label: "KOL Group Seeding (300 groups)", platform: "Facebook Groups", turnaround: "7–10 days", price: "฿1,000.00" },
-  { label: "KOL Group Seeding (500+ groups)", platform: "Facebook Groups", turnaround: "10–14 days", price: "฿850.00" },
-  { label: "Community Seeding (300x)", platform: "Facebook Groups", turnaround: "5–7 days", price: "฿1,000.00" },
-  { label: "Community Seeding (500x)", platform: "Facebook Groups", turnaround: "7–10 days", price: "฿900.00" },
-  { label: "Community Seeding (1,000x)", platform: "Facebook Groups", turnaround: "10–14 days", price: "฿850.00" },
-  { label: "Community Seeding (2,000x)", platform: "Facebook Groups", turnaround: "14–21 days", price: "฿800.00" },
+  { label: "Seeding Post (Photo)", prices: ["1,700.00", "1,450.00", "1,400.00", "1,350.00", "1,300.00"] },
+  { label: "Seeding Post (Text / Q&A)", prices: ["900.00", "800.00", "750.00", "720.00", "700.00"] },
+  { label: "Seeding Comment", prices: ["300.00", "260.00", "240.00", "220.00", "200.00"] },
+  { label: "+ Add on: Before / After Visual", prices: ["900.00", "800.00", "750.00", "720.00", "700.00"] },
+]
+
+const REVIEW_COLUMNS = ["300x", "500x", "1,000x", "2,000x"]
+
+const REVIEW_ROWS_TABLE = [
+  { label: "Text + Photo Review", prices: ["1,000.00", "900.00", "850.00", "800.00"] },
 ]
 
 const KOL_TIERS = [
@@ -58,43 +58,6 @@ const KOL_TIERS = [
   { label: "Micro (10K – 50K Followers)", photo: "฿3,500 – ฿9,000", video: "฿5,600 – ฿14,400", story: "฿1,400 – ฿3,600", live: "฿7,000 – ฿18,000" },
   { label: "Mid-Tier (50K – 200K Followers)", photo: "฿9,000 – ฿25,000", video: "฿14,400 – ฿40,000", story: "฿3,600 – ฿10,000", live: "฿18,000 – ฿50,000" },
   { label: "Macro (200K+ Followers)", photo: "฿25,000 – ฿70,000", video: "฿40,000 – ฿112,000", story: "฿10,000 – ฿28,000", live: "฿50,000 – ฿140,000" },
-]
-
-const REVIEW_TIERS = [
-  {
-    name: "Text Review",
-    price: "฿900.00",
-    volumes: "100 / 300 / 500 / 1,000 units",
-    features: [
-      "5-star rating with written copy",
-      "Deployed on Shopee & Lazada",
-      "Natural, varied language per reviewer",
-      "No volume discount — proof-point pricing",
-    ],
-  },
-  {
-    name: "Photo Review",
-    price: "฿1,200.00",
-    volumes: "100 / 300 / 500 / 1,000 units",
-    features: [
-      "Product-in-use photo + written rating",
-      "Highest weight in Shopee ranking algorithm",
-      "Best ROI per baht spent",
-      "Most requested tier by enterprise clients",
-    ],
-    highlight: true,
-  },
-  {
-    name: "Video Review",
-    price: "฿2,300.00",
-    volumes: "100 / 300 / 500 / 1,000 units",
-    features: [
-      "Short-form video demo + rating",
-      "Recommended for hero SKUs only",
-      "Highest engagement & dwell time",
-      "Doubles as organic social content",
-    ],
-  },
 ]
 
 const PROCESS = [
@@ -168,34 +131,34 @@ export default function Services() {
               {t("All-in pricing per unit. Rates scale down automatically at higher volumes.")}
             </p>
           </div>
-          {/* Mobile: stacked cards */}
-          <div className="reveal space-y-2.5 sm:hidden">
-            {SEEDING_ROWS.map((r) => (
-              <div key={r.label} className="rounded-2xl border border-border bg-white px-4 py-3.5">
-                <p className="text-sm font-medium text-foreground leading-snug">{t(r.label)}</p>
-                <div className="mt-2 flex items-center justify-between gap-2">
-                  <span className="text-xs text-muted-foreground">{t(r.platform)}</span>
-                  <span className="text-base font-semibold text-primary shrink-0">{r.price}</span>
-                </div>
-              </div>
-            ))}
+          <p className="mb-2 text-xs text-muted-foreground reveal sm:hidden">{t("Swipe to see all columns →")}</p>
+          <div className="reveal overflow-x-auto rounded-2xl border border-border">
+            <table className="w-full text-sm min-w-[680px]">
+              <thead>
+                <tr className="bg-primary/15">
+                  <th className="text-left px-4 py-3 font-bold text-foreground text-xs uppercase tracking-wide">{t("Format")}</th>
+                  {SEEDING_COLUMNS.map((c) => (
+                    <th key={c} className="text-center px-4 py-3 font-bold text-foreground text-xs uppercase tracking-wide whitespace-nowrap">
+                      {t(c)}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {SEEDING_ROWS.map((r, i) => (
+                  <tr key={r.label} className={i % 2 ? "bg-white" : "bg-muted/40"}>
+                    <td className="px-4 py-3.5 font-medium text-foreground whitespace-nowrap">{t(r.label)}</td>
+                    {r.prices.map((p, j) => (
+                      <td key={j} className="text-center px-4 py-3.5 font-semibold text-primary whitespace-nowrap">
+                        {p}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-          {/* Desktop: table */}
-          <div className="reveal hidden sm:block bg-white rounded-3xl border border-border overflow-hidden">
-            <div className="grid grid-cols-4 bg-muted text-xs font-semibold text-foreground uppercase tracking-wide px-4 py-3">
-              <span className="col-span-2">{t("Format & Volume")}</span>
-              <span>{t("Platform")}</span>
-              <span className="text-right">{t("All-In Price")}</span>
-            </div>
-            {SEEDING_ROWS.map((r, i) => (
-              <div key={r.label} className={`grid grid-cols-4 px-4 py-3 text-sm items-center ${i % 2 ? "bg-white" : "bg-muted/40"}`}>
-                <span className="col-span-2 text-foreground font-medium">{t(r.label)}</span>
-                <span className="text-muted-foreground text-xs">{t(r.platform)}</span>
-                <span className="text-right font-semibold text-primary">{r.price}</span>
-              </div>
-            ))}
-          </div>
-          <p className="mt-4 text-xs text-muted-foreground reveal">{t("Turnaround ranges 3–14 days depending on volume. All prices exclude management fee (10%) and VAT.")}</p>
+          <p className="mt-4 text-xs text-muted-foreground reveal">{t("Rates are per unit, THB. All prices exclude management fee (10%) and VAT.")}</p>
         </div>
       </section>
 
@@ -249,41 +212,39 @@ export default function Services() {
         <div className="max-w-6xl mx-auto px-6 md:px-10">
           <div className="max-w-xl mb-10 reveal">
             <p className="text-sm font-medium text-primary/90">{t("Rate Card")}</p>
-            <h2 className="mt-3 text-3xl md:text-[42px] font-bold text-foreground">{t("Verified E-Commerce Reviews")}</h2>
+            <h2 className="mt-3 text-3xl md:text-[42px] font-bold text-foreground">{t("Shopee / Lazada Reviews")}</h2>
             <p className="mt-3 text-muted-foreground">
-              {t("Shopee & Lazada review packages from real, verified buyers. No volume discounts — reviews are your proof point.")}
+              {t("Shopee & Lazada review packages from real, verified buyers. THB per review.")}
             </p>
           </div>
-          <div className="reveal grid md:grid-cols-3 gap-6">
-            {REVIEW_TIERS.map((p) => (
-              <div
-                key={p.name}
-                className={`bg-white rounded-3xl border p-6 flex flex-col ${p.highlight ? "border-primary shadow-lg md:-translate-y-2" : "border-border"}`}
-              >
-                {p.highlight && (
-                  <span className="mb-3 inline-block w-fit text-[11px] font-semibold uppercase tracking-wide text-primary bg-primary/10 rounded-full px-3 py-1">
-                    {t("Most Popular")}
-                  </span>
-                )}
-                <h3 className="text-lg font-bold text-foreground">{t(p.name)}</h3>
-                <p className="text-sm text-muted-foreground">{t(p.volumes)}</p>
-                <p className="mt-4 text-2xl font-bold text-primary">{p.price} <span className="text-sm font-medium text-muted-foreground">/ {t("unit")}</span></p>
-                <ul className="mt-4 space-y-2 flex-1">
-                  {p.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                      {t(f)}
-                    </li>
+          <div className="reveal overflow-x-auto rounded-2xl border border-border">
+            <table className="w-full text-sm min-w-[480px]">
+              <thead>
+                <tr className="bg-primary/15">
+                  <th className="text-left px-4 py-3 font-bold text-foreground text-xs uppercase tracking-wide">{t("Pack")}</th>
+                  {REVIEW_COLUMNS.map((c) => (
+                    <th key={t(c)} className="text-center px-4 py-3 font-bold text-foreground text-xs uppercase tracking-wide">
+                      {t(c)}
+                    </th>
                   ))}
-                </ul>
-              </div>
-            ))}
+                </tr>
+              </thead>
+              <tbody>
+                {REVIEW_ROWS_TABLE.map((r) => (
+                  <tr key={r.label} className="bg-white">
+                    <td className="px-4 py-3.5 font-medium text-foreground whitespace-nowrap">{t(r.label)}</td>
+                    {r.prices.map((p, j) => (
+                      <td key={j} className="text-center px-4 py-3.5 font-semibold text-primary whitespace-nowrap">
+                        {p}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
           <p className="mt-6 text-xs text-muted-foreground reveal font-medium">
             {t("Note: Management fee (10%) is not included in any prices above. All prices exclude VAT. Final invoice will include applicable taxes, fees, and management charges.")}
-          </p>
-          <p className="mt-2 text-xs text-muted-foreground reveal">
-            {t("All packages exclude management fee (10%) and VAT.")}
           </p>
         </div>
       </section>
