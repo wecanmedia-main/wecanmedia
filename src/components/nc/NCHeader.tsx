@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Menu, X, ArrowRight } from "lucide-react"
+import { Menu, X, ArrowRight, MessageCircle } from "lucide-react"
 import { useTranslation } from 'react-i18next'
 import { LanguageToggle } from "../LanguageToggle"
 
@@ -22,11 +22,23 @@ export function NCHeader() {
   }, [])
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#00171F]/90 backdrop-blur-md shadow-lg" : "bg-transparent"
-      }`}
-    >
+    <>
+      {/* Sticky LINE Icon */}
+      <a
+        href="https://lin.ee/67M9LzF"
+        target="_blank"
+        rel="noreferrer"
+        aria-label={t("LINE")}
+        className="fixed right-6 bottom-6 z-40 w-14 h-14 rounded-full bg-primary text-[#3d3d3d] flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300"
+      >
+        <img src="/assets/line-sticky-icon.webp" alt="LINE" className="w-6 h-6" />
+      </a>
+
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled ? "bg-[#00171F]/90 backdrop-blur-md shadow-lg" : "bg-transparent"
+        }`}
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 h-16 md:h-20 flex items-center justify-between gap-3">
         <a href="/" className="flex items-center shrink-0">
           <img
@@ -101,6 +113,7 @@ export function NCHeader() {
         </div>
       )}
     </header>
+    </>
   )
 }
 
